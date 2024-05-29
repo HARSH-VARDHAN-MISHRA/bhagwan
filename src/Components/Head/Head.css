@@ -1,0 +1,10 @@
+.head{
+    padding: 2rem 0rem;
+    text-align: center;
+    font-family: var(--font-babes);
+    text-transform: uppercase;
+}
+
+.head h2{
+    margin-bottom: 0.2rem;
+}
