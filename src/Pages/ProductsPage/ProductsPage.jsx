@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ProductsPage.css'
 import { Link } from 'react-router-dom'
 
@@ -184,6 +184,13 @@ const ProductsPage = () => {
             setLoading(false);
         }, 2000);
     }
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
     return (
         <>
             <section class="bread mb-5">

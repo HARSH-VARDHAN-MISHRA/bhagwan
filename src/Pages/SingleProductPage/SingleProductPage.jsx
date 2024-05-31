@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SingleProductPage.css';
 import { Link } from 'react-router-dom';
 import Head from '../../Components/Head/Head';
@@ -34,6 +34,13 @@ const SingleProductPage = () => {
     const handleImageHover = (img) => {
         setMainImage(img);
     };
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
 
     return (
         <>

@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from '../../Components/Head/Head'
 import NewArrival from '../../Components/FilterProduct/NewArrival'
 import Category from '../../Components/Category/Category'
 
 const HomePage = () => {
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
   return (
     <>
 

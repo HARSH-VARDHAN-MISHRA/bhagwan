@@ -273,3 +273,112 @@ header nav ul a{
 
 
 
+
+
+
+
+/* ------- side bar -------  */
+/* -------- Side Nav ---  */
+.side-nav .mob-nav{
+    height: 100vh;
+    width: 74vw;
+    background-color: white;
+    position: fixed;
+    left: -100%;
+    top: 0%;
+    z-index: 99999;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid rgb(187, 187, 187);
+
+    transition: all 0.3s linear;
+}
+
+.mob-active{
+    left: 0% !important;
+}
+
+.side-nav .mob-nav .menu-close{
+    width: 100%;
+    padding: 17px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
+    color: var(--color-red);
+}
+
+.side-nav .mob-nav .menu-close i{
+    font-size: 30px;
+}
+
+.side-nav .mob-nav ul{
+    width: 100%;
+}
+
+.side-nav .mob-nav ul li{
+    width: 100%;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.side-nav .mob-nav ul li a{
+    display: inline-block;
+    padding: 12px 12px;
+    text-decoration: none;
+    color: var(--color-orange);
+    text-transform: capitalize;
+}
+
+.side-nav .mob-nav .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+.side-nav .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    width: 100%;
+}
+.side-nav .social-icons a{
+    height: 2.2rem;
+    width: 2.2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-orange);
+    text-decoration: none;
+    color: var(--color-orange);
+    transition: var(--transition-3);
+}
+.side-nav .social-icons a:hover{
+    background: var(--color-orange);
+    color: white;
+}
+
+
+.side-nav .main-dropdown .dropName{
+    display: block;
+    padding: 12px 12px;
+    text-decoration: none;
+    color: var(--color-brown);
+    text-transform: capitalize;
+}
+.side-nav .main-dropdown .dropName::before {
+    right: 5%;
+    top: 30%;
+}
+.side-nav .main-dropdown .dropdown-content {
+    left: 0%;
+    right: 0%;
+}
+
+
+
+
+
+
+

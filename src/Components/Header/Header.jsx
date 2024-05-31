@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
+
+    const [isMobModeActive, setIsMobModeActive] = useState(false)
+
+    const activeMobMode = () => {
+        setIsMobModeActive(!isMobModeActive)
+    }
+
+    const deActiveMobMode = () => {
+        setIsMobModeActive(false)
+    }
+
     return (
         <>
             <header>
                 <div className="top-sec">Avail 10% Off, Use Code - HARSH001</div>
                 <head>
 
-                    <div className="bar">
+                    <div className="bar" onClick={activeMobMode}>
                         <i class="fa-solid fa-bars"></i>
                     </div>
                     <div className="left">
@@ -103,12 +114,36 @@ const Header = () => {
                             <i class="fa-solid fa-bag-shopping"></i>
                             <span className="num">1</span>
                         </Link>
-                        <Link className="icon profile">
+                        <Link to="/sign-up" className="icon profile">
                             <i class="fa-solid fa-user"></i>
                         </Link>
                     </div>
                 </head>
             </header>
+
+
+            <div className="side-nav">
+                <div className={`mob-nav p-2 ${isMobModeActive ? 'mob-active' : ''}`}>
+                    <div className="menu-close">
+                        <i className="fa-solid fa-xmark" onClick={deActiveMobMode}></i>
+                    </div>
+                    <ul className="list-unstyled">
+                        <li><Link to="/" onClick={deActiveMobMode}>home</Link></li>
+                        <li><Link to="/collections/collection-name" onClick={deActiveMobMode}>Collections</Link></li>
+                        <li><Link to="/collections/collection-name/product-name" onClick={deActiveMobMode}>Product Page</Link></li>
+                        <li><Link to="/login" onClick={deActiveMobMode}>Login</Link></li>
+                        <li><Link to="/sign-up" onClick={deActiveMobMode}>Sign Up</Link></li>
+                        
+                        
+                    </ul>
+                    <div className="social-icons mt-4">
+                        <a href="#"><i className="fab fa-facebook-f"></i></a>
+                        <a href="#"><i className="fab fa-twitter"></i></a>
+                        <a href="#"><i className="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank"><i className="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="mobile-footer">
@@ -126,7 +161,7 @@ const Header = () => {
                     <i class="fa-solid fa-bag-shopping"></i>
                     <small>Cart</small>
                 </Link>
-                <Link to="/login" class="single ">
+                <Link to="/sign-up" class="single ">
                     <i class="fa-solid fa-user"></i >
                     <small>Profile</small>
                 </Link>
