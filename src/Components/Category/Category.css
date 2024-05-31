@@ -1,3 +1,6 @@
+.single-category{
+    color: inherit;
+}
 .single-category .img img{
     border-radius: 50%;
     border: 1px dashed var(--color-orange);

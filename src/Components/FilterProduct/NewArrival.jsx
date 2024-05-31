@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NewArrival = () => {
     const productList = [
@@ -47,7 +48,7 @@ const NewArrival = () => {
                     <div className="grid-5">
 
                         {productList.map((product, index) => (
-                            <div className="single-pro" key={index}>
+                            <Link className="single-pro" key={index}>
                                 <div className="img">
                                     <img src={product.productImg} alt={product.productName} />
                                     <div className="off-per">{product.offPercentage}%</div>
@@ -65,7 +66,7 @@ const NewArrival = () => {
                                         add to cart
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
 
 

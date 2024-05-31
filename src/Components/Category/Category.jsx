@@ -1,5 +1,6 @@
 import React from 'react'
 import './Category.css'
+import { Link } from 'react-router-dom';
 
 const Category = () => {
     const categoryList = [
@@ -36,12 +37,12 @@ const Category = () => {
                     <div className="grid-5 grid-6">
 
                         {categoryList.map((category, index) => (
-                            <div className="single-category text-center" key={index}>
+                            <Link className="single-category text-center" key={index}>
                                 <div className="img">
                                     <img src={category.cateImage} alt={category.cateName} />
                                 </div>
                                 <h4>{category.cateName}</h4>
-                            </div>
+                            </Link>
                         ))}
 
                     </div>
