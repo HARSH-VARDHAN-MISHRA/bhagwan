@@ -3,6 +3,8 @@ import './App.css';
 import HomePage from './Pages/HomePage/HomePage';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import ProductsPage from './Pages/ProductsPage/ProductsPage';
+import SingleProductPage from './Pages/SingleProductPage/SingleProductPage';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
 
         <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='/collections/collection-name' element={<ProductsPage/>} />
+          <Route path='/collections/collection-name/product-name' element={<SingleProductPage/>} />
         </Routes>
 
         <Footer/>

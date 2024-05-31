@@ -48,7 +48,7 @@ const NewArrival = () => {
                     <div className="grid-5">
 
                         {productList.map((product, index) => (
-                            <Link className="single-pro" key={index}>
+                            <Link to={`/collections/collection-name`} className="single-pro" key={index}>
                                 <div className="img">
                                     <img src={product.productImg} alt={product.productName} />
                                     <div className="off-per">{product.offPercentage}%</div>

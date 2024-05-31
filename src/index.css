@@ -64,6 +64,10 @@ input[type=number] {
 }
 
 
+
+
+
+
 /* ---------- Universal Classes ---  */
 .flex{
   display: flex;
@@ -89,6 +93,22 @@ a{
   grid-template-columns: repeat(6,1fr);
   gap: 1rem;
 }
+
+/* --- For all ---  */
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 1rem;
+}
+
+.grid-3{
+  grid-template-columns: repeat(3,1fr);
+}
+
+
+
+
+/* ----- Universal Media Querry ----  */
 @media only screen and (max-width: 1100px){
   .grid-5{
     grid-template-columns: repeat(4,1fr);
@@ -98,12 +118,69 @@ a{
   .grid-5{
     grid-template-columns: repeat(3,1fr);
   }
+  .grid-2{
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 @media only screen and (max-width: 540px){
   .grid-5{
     grid-template-columns: repeat(2,1fr);
   }
+  .grid-2{
+    grid-template-columns: repeat(2,1fr);
+  }
 }
+
+
+
+
+/* ---------- Breadcrumb ------  */
+.bread{
+  color: white;
+  background: var(--color-orange);
+  padding: 2rem 0rem;
+}
+.bread h2{
+  text-transform: capitalize;
+}
+.bread .breadcrumb{
+  white-space: nowrap;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+.bread .breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+.bread .breadcrumb .para{
+  width: 40%;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+.bread .breadcrumb .breadcrumb-item.active {
+  color: var(--bg-white-button);
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.bread .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -114,6 +191,7 @@ a{
   flex-direction: column;
   margin-bottom: 20px;
   color: inherit;
+  overflow: hidden;
 }
 
 .single-pro .img {
@@ -137,7 +215,7 @@ a{
 .single-pro .hover-content  {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: -100px;
   background-color: rgba(255, 255, 255, 0.7);
   color: var(--color-red);
   padding: 0.1rem;
@@ -150,9 +228,10 @@ a{
   cursor: pointer;
   transition: var(--transition-3);
 }
-.single-pro .hover-content:hover{
+.single-pro:hover .hover-content{
   background-color: rgba(255, 255, 255, 0.831);
   font-size: 1.2rem;
+  right: 15px;
 }
 
 .pro-det{

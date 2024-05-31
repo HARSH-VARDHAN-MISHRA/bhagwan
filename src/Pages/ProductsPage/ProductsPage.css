@@ -1,0 +1,112 @@
+.head-ban select{
+    outline: none;
+    border: 1px solid var(--color-orange);
+    background: var(--color-orange);
+    color: white;
+    padding: 1px 0.5rem;
+    border-radius: 5px;
+}
+/* .head-ban option:hover,
+.head-ban option:focus,
+.head-ban option:active {
+    background: white !important;
+    color: var(--color-orange);
+} */
+.head-ban.flex{
+    flex-wrap: wrap;
+}
+
+
+.products .accordion-button {
+    align-items: start;
+    padding: 1rem 0.5rem;
+}
+.products .accordion {
+    background-color: none;
+}
+.products .accordion-item {
+    border: none;
+}
+.products .accordion-button {
+    color: var(--color-orange);
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-grey-text);
+}
+.products .accordion-body {
+    padding: 1rem 0.3rem;
+}
+.products .accordion-button:not(.collapsed) {
+    color: var(--color-orange);
+    background-color: white;
+    box-shadow: none;
+}
+
+.products ul{
+    padding-left: 0rem;
+}
+.products ul a{
+    color: var(--color-black-light);
+    display: block;
+    padding-bottom: 0.7rem;
+}
+.products ul a:hover{
+    color: var(--color-orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loader {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--color-orange);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.show-more {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.show-more button {
+    color: var(--color-orange);
+    background: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--color-orange);
+    transition: all 0.3s ease;
+}
+
+.show-more button:hover {
+    background: var(--color-orange);
+    color: white;
+}

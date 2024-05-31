@@ -37,7 +37,7 @@ const Category = () => {
                     <div className="grid-5 grid-6">
 
                         {categoryList.map((category, index) => (
-                            <Link className="single-category text-center" key={index}>
+                            <Link to={`/collections/collection-name`} className="single-category text-center" key={index}>
                                 <div className="img">
                                     <img src={category.cateImage} alt={category.cateName} />
                                 </div>
